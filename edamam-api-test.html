@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function getDatafromApi() {
+            var result = $.ajax({
+                    /* update API end point */
+                    url: "https://api.edamam.com/search?q=chicken&app_id=aea62957&app_key=f331324dcd41f79e36bde22b77fdff52&callback=?",
+                    dataType: "jsonp",
+                    /*set the call type GET / POST*/
+                    type: "GET"
+                })
+                /* if the call is successful (status 200 OK) show results */
+                .done(function(result) {
+                    /* if the results are meeningful, we can just console.log them */
+                    console.log(result);
+                    /* if the results are not meeningful, it might help to convert them to string first
+                    var displayStringifiedResults = JSON.stringify(result);
+                    console.log(displayStringifiedResults);*/
+                    /* if the results contain invalid json, it might help to sanitize them first
+                    var displaySanitizedResults = sanitizeJSON(result);
+                    console.log(displaySanitizedResults);*/
+                })
+                /* if the call is NOT successful show errors */
+                .fail(function(jqXHR, error, errorThrown) {
+                    console.log(jqXHR);
+                    console.log(error);
+                    console.log(errorThrown);
+                });
+
+
+            /*$.getJSON("https://api.edamam.com/search?q=chicken&app_id=aea62957&app_key=f331324dcd41f79e36bde22b77fdff52&callback=?",function(json){
+  console.log(json);
+});*/
+        }
+
+
+        function handleSubmit() {
+            $('.js-search-form').submit(event => {
+                event.preventDefault();
+                const queryString = $('.js-query').val();
+                console.log(queryString);
+                getDatafromApi();
+            });
+        }
+
+        $(handleSubmit)
+
+    </script>
+</head>
+
+<body>
+    <section class="dog"></section>
+    <div id="tag"></div>
+    <section class="hamster">something <img src="" alt=""></section>
+    <section class="hamster">something <img src="" alt=""></section>
+    <section class="hamster">something <img src="" alt=""></section>
+    <section class="hamster">something <img src="" alt=""></section>
+    <section class="hamster">something <img src="" alt=""></learn>
+        <section class="orange">
+            <div class="apple">
+        </section>
+</body>
+
+</html>
