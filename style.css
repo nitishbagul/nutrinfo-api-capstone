@@ -1,0 +1,23 @@
+body * {
+    box-sizing: border-box;
+}
+
+section {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.ingredients,
+.nutrition {
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.watch {
+    size: 100px 100px;
+    border: 1px solid black;
+}

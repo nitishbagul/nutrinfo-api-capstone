@@ -2,17 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>NutrInfo Web App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Search over 2 milllion food recipies across the globe">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <header></header>
-    <section></section>
-    <footer></footer>
-    <script src="app.js"></script>
+    <section class="welcome-page" style="border : 1px solid black;">
+        <h1>NutrInfo</h1>
+        <p>Want to cook your favorite meal but not sure how healthy it is? NutrInfo is your friend. Search over 2 million food recipies across the globe along with the nutrition information.
+        </p>
+        <button>Get Started</button>
+    </section>
+    <section class="main-page" style="border : 1px solid black;">
+        <h1>NutrInfo</h1>
+        <h2>Search a food item here</h2>
+        <form action="#" class="js-search-form">
+            <label for="query"></label>
+            <input type="text" id="query" class="js-query" aria-label="search">
+            <button type="submit" id="search-button">Search</button>
+        </form>
+        <div class="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+                <li>3 tbs oil</li>
+                <li>2 tbs sugar</li>
+                <li>1/2 c chopped onions</li>
+            </ul>
+        </div>
+        <div class="nutrition">
+            <h3>Nutrition</h3>
+            <ul>
+                <li>Fat 7g</li>
+                <li>Carbs 24g</li>
+                <li>Protiens 5g</li>
+            </ul>
+        </div>
+        <div class="watch">
+            <h3>Watch</h3>
+            <div class="video-panel"></div>
+        </div>
+    </section>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
