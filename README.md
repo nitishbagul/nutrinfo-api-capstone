@@ -15,3 +15,10 @@ Nutrinfo lets you find your favorite recipies with essesntial nutritional inform
      - Nutritional value
      
 - As a user, I would like to watch a video of the recipe if available.
+
+# Initial UI
+
+![UI Flow](https://github.com/nitishbagul/nutrinfo-api-capstone/blob/master/Wireframes/nutrinfo-welcome.jpg)
+
+![UI Flow](https://github.com/nitishbagul/nutrinfo-api-capstone/blob/master/Wireframes/nutinfo-page1.jpg)
+
