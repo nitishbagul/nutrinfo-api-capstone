@@ -12,40 +12,83 @@
 </head>
 
 <body>
-    <section class="welcome-page" style="border : 1px solid black;">
-        <h1>NutrInfo</h1>
-        <p>Want to cook your favorite meal but not sure how healthy it is? NutrInfo is your friend. Search over 2 million food recipies across the globe along with the nutrition information.
-        </p>
-        <button>Get Started</button>
+    <section class="search-list">
+        <header>
+            <h1>NutrInfo</h1>
+            <p>Want to cook your favorite meal but not sure how healthy it is? NutrInfo is your friend. Search over 2 million food recipies across the globe along with the nutrition information.
+            </p>
+        </header>
+
+        <main role="main">
+            <form action="#" class="js-search-form">
+                <label for="query"><h2>Search a food item here</h2></label>
+                <input type="text" id="query" class="js-query" aria-label="search">
+                <button type="submit" id="search-button">Search</button>
+                <p class="accuracy-note">*For accurate results, try to be as specific as possible</p>
+            </form>
+            <section class="result">
+                <p>Here are some results matching your query. Select any of them to know more.</p>
+                <ul class="query-results">
+                    <li>Teriyaki Chicken</li>
+                    <li>Chicken Vesuvio</li>
+                    <li>Chicken Satay</li>
+                    <li>Baked Chicken</li>
+                    <li>Catalan Chicken</li>
+                </ul>
+            </section>
+        </main>
     </section>
-    <section class="main-page" style="border : 1px solid black;">
-        <h1>NutrInfo</h1>
-        <h2>Search a food item here</h2>
-        <form action="#" class="js-search-form">
-            <label for="query"></label>
-            <input type="text" id="query" class="js-query" aria-label="search">
-            <button type="submit" id="search-button">Search</button>
-        </form>
-        <div class="ingredients">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>3 tbs oil</li>
-                <li>2 tbs sugar</li>
-                <li>1/2 c chopped onions</li>
-            </ul>
-        </div>
-        <div class="nutrition">
-            <h3>Nutrition</h3>
-            <ul>
-                <li>Fat 7g</li>
-                <li>Carbs 24g</li>
-                <li>Protiens 5g</li>
-            </ul>
-        </div>
-        <div class="watch">
-            <h3>Watch</h3>
-            <div class="video-panel"></div>
-        </div>
+
+
+    <section class="search-result">
+        <header>
+            <h1>NutrInfo</h1>
+            <p>Want to cook your favorite meal but not sure how healthy it is? NutrInfo is your friend. Search over 2 million food recipies across the globe along with the nutrition information.
+            </p>
+        </header>
+
+        <main role="main">
+            <form action="#" class="js-search-form">
+                <label for="query"><h2>Search a food item here</h2></label>
+                <input type="text" id="query" class="js-query" aria-label="search">
+                <button type="submit" id="search-button">Search</button>
+                <p class="accuracy-note">*For accurate results, try to be as specific as possible</p>
+            </form>
+
+            <section class="result">
+                <div class="title-area">
+                    <img src="https://www.edamam.com/web-img/262/262b4353ca25074178ead2a07cdf7dc1.jpg" alt="Smiley face" class="title-image">
+                    <h4 class="item-name">Chicken Teriyaki</h4>
+                </div>
+                <div class="result-wrapper">
+                    <div class="ingredients">
+                        <h3>Ingredients</h3>
+                        <ul>
+                            <li>3 tbs oil</li>
+                            <li>2 tbs sugar</li>
+                            <li>1/2 c chopped onions</li>
+                        </ul>
+                    </div>
+                    <div class="nutrition">
+                        <h3>Nutrition</h3>
+                        <ul>
+                            <li>Fat 7g</li>
+                            <li>Carbs 24g</li>
+                            <li>Protiens 5g</li>
+                            <li>Fiber 5g</li>
+                        </ul>
+                    </div>
+                    <div class="preparation">
+                        <h3>Preparation</h3>
+                        <span>Read full recipe here</span>
+                        <br>
+                        <button type="button">Instructions</button>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
     </section>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="app.js"></script>

@@ -2,22 +2,91 @@ body * {
     box-sizing: border-box;
 }
 
-section {
+.search-list,
+.search-result {
+    border: 2px solid brown;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+header {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
+    border: 1px solid blue;
+}
+
+main {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+h1 {
+    display: block;
+    text-align: left;
+    padding: 10px;
+}
+
+p {
+    display: block;
+    text-align: left;
+    padding: 10px;
+}
+
+form {
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid black;
+    width: 400px;
+}
+
+.result {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid green;
+}
+
+.query-results {
+    list-style: none;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.title-area {
+    border: 1px solid blue;
+    line-height: 120px;
+    padding: 10px;
+    text-align: center;
+}
+
+.title-image {
+    border: 1px solid black;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.item-name {
+    display: inline-block;
+    border: 1px solid black;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.result-wrapper {
+    text-align: center;
 }
 
 .ingredients,
-.nutrition {
+.nutrition,
+.preparation {
+    display: inline-block;
     border: 1px solid black;
+    height: 100%;
     margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.watch {
-    size: 100px 100px;
-    border: 1px solid black;
 }
