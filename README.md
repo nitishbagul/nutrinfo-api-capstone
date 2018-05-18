@@ -1,4 +1,4 @@
-# nutrinfo-api-capstone
+# NutrInfo-api-capstone
 
 Nutrinfo lets you find your favorite recipies with essesntial nutritional information. It uses Edamam recipe search API with which you can search over 1.5 million English and 200,000 Spanish recipes.    
 
@@ -16,9 +16,33 @@ Nutrinfo lets you find your favorite recipies with essesntial nutritional inform
      
 - As a user, I would like to watch a video of the recipe if available.
 
-# Initial UI
+# Initial UX
 
-![UI Flow](https://github.com/nitishbagul/nutrinfo-api-capstone/blob/master/Wireframes/nutrinfo-welcome.jpg)
+![UI Flow](https://github.com/nitishbagul/nutrinfo-api-capstone/blob/master/Wireframes/Nutrinfo-p1.jpg)
 
-![UI Flow](https://github.com/nitishbagul/nutrinfo-api-capstone/blob/master/Wireframes/nutinfo-page1.jpg)
+![UI Flow](https://github.com/nitishbagul/nutrinfo-api-capstone/blob/master/Wireframes/Nutrinfo-p2.jpg)
+
+# Working Prototype
+https://nitishbagul.github.io/nutrinfo-api-capstone/
+
+# Technical
+
+### Front End
+
+* HTML5
+* CSS3
+* JavaScript
+* jQuery
+
+### Back End
+
+### Responsive
+
+### Security
+
+## API Documentation
+
+## Development Roadmap
+
+
 
