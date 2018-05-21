@@ -1,19 +1,34 @@
 /* Step1: Defining Global variable functions and objects*/
-function displayRecipeData(result) {
+let RESULT = null;
+
+function displayRecipeChoices(result) {
     console.log(result);
     //create an empty variable to store one LI for each one the results
     var buildTheHtmlOutput = "";
 
     $.each(result, function (resultKey, resultValue) {
         //create and populate one LI for each of the results ( "+=" means concatenate to the previous one)
-        buildTheHtmlOutput += "<li>";
-        buildTheHtmlOutput += resultValue.recipe.label; //output vide title
+        buildTheHtmlOutput += `<li id="item-${resultKey}">`;
+        buildTheHtmlOutput += resultValue.recipe.label;
         buildTheHtmlOutput += "</li>";
     });
 
     //use the HTML output to show it in the index.html
     $(".query-results").html(buildTheHtmlOutput);
 }
+
+function displayRecipeDetails(clickedBtnID) {
+    console.log(RESULT[0]);
+    var buildTheHtmlOutput = "";
+
+    //show image
+    buildTheHtmlOutput += `<img src="${RESULT[clickedBtnID].recipe.image}" alt="main image" class="title-image"> `;
+    //show title
+    buildTheHtmlOutput += `<h4 class="item-name">${RESULT[clickedBtnID].recipe.label}</h4>`;
+
+    $(".title-area").html(buildTheHtmlOutput);
+}
+
 /* Step2: Using Global variable functions and objects {triggers}*/
 
 //when the page loads...
@@ -39,7 +54,8 @@ $(document).ready(function () {
                 .done(function (result) {
                     /* if the results are meeningful, we can just console.log them */
                     //console.log(result);
-                    displayRecipeData(result.hits);
+                    RESULT = result.hits;
+                    displayRecipeChoices(result.hits);
                     $(".show-recipe").hide();
                     $(".search-result").show();
                 })
@@ -55,7 +71,11 @@ $(document).ready(function () {
 
 //button triggers
 $(document).on('click', '.query-results li', function (event) {
+
     event.preventDefault();
+    let clickedBtnID = this.id.match(/\d+/)[0];
+    console.log(clickedBtnID);
+    displayRecipeDetails(clickedBtnID);
     $(".show-recipe").show();
     $(".search-result").hide();
 });
