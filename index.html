@@ -21,8 +21,10 @@
 
         <main role="main">
             <form action="#" class="js-search-form">
-                <label for="query"><h2>Search a food item here</h2></label>
-                <input type="text" id="query" class="js-query" aria-label="search">
+                <div class="wrapper-input">
+                    <label for="query"><h2>Search a food item here</h2></label>
+                    <input type="text" id="query" class="js-query" aria-label="search">
+                </div>
                 <button type="submit" id="search-button">Search</button>
                 <p class="accuracy-note">*For accurate results, try to be as specific as possible</p>
             </form>
@@ -49,13 +51,15 @@
 
         <main role="main">
             <form action="#" class="js-search-form">
-                <label for="query"><h2>Search a food item here</h2></label>
-                <input type="text" id="query" class="js-query" aria-label="search">
+                <div class="wrapper-input">
+                    <label for="query"><h2>Search a food item here</h2></label>
+                    <input type="text" id="query" class="js-query" aria-label="search">
+                </div>
                 <button type="submit" id="search-button">Search</button>
                 <p class="accuracy-note">*For accurate results, try to be as specific as possible</p>
             </form>
 
-            <section class="result">
+            <section class="result-page">
                 <div class="title-area">
                     <img src="https://www.edamam.com/web-img/262/262b4353ca25074178ead2a07cdf7dc1.jpg" alt="Smiley face" class="title-image">
                     <h4 class="item-name">Chicken Teriyaki</h4>
@@ -80,8 +84,7 @@
                     </div>
                     <div class="preparation">
                         <h3>Preparation</h3>
-                        <span>Read full recipe here</span>
-                        <br>
+                        <p>Read full recipe here</p>
                         <button type="button">Instructions</button>
                     </div>
 
