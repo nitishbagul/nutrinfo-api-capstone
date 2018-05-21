@@ -26,11 +26,13 @@ html {
 }
 
 header {
-    background: linear-gradient( rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2));
-    padding: 5px;
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     margin-top: 20px;
-    border: 1px solid blue;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 h1 {
@@ -49,29 +51,25 @@ p {
 
 header > p {
     font-size: 20px;
-    padding-left: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .search-list,
 .search-result {
-    border: 2px solid brown;
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
 
-main {
-    border: 1px solid red;
-    padding: 10px;
-}
-
 form {
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
     width: 90%;
     text-align: center;
     margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .wrapper-input {
@@ -119,16 +117,9 @@ button {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid green;
 
 }
 
-.title-area {
-    border: 1px solid black;
-
-
-
-}
 
 .result > p {
     text-align: center;
@@ -153,14 +144,12 @@ button {
 }
 
 .title-area {
-    border: 1px solid blue;
     line-height: 120px;
     padding: 10px;
     text-align: center;
 }
 
 .title-image {
-    border: 1px solid black;
     display: inline-block;
     width: 100px;
     height: 100px;
@@ -171,7 +160,6 @@ button {
 
 .item-name {
     display: inline-block;
-    border: 1px solid black;
     line-height: normal;
     vertical-align: middle;
     font-weight: 600;
@@ -179,15 +167,15 @@ button {
 
 .result-wrapper {
     text-align: center;
-    width: 95%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .result-page {
-
-    background-image: linear-gradient( rgba(255, 215, 15, 1),
-    rgba(255, 215, 15, 0.5))
+    background-image: linear-gradient( rgba(255, 215, 15, 1), rgba(255, 215, 15, 0.5));
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .title-area h4 {
@@ -201,7 +189,7 @@ button {
     display: inline-block;
     border: 1px solid black;
     height: 120px;
-    width: 30%;
+    width: 31.5%;
     margin-top: 10px;
     margin-left: 0.5%;
     margin-right: 0.5%;
@@ -210,7 +198,6 @@ button {
 
 .result-wrapper h3 {
     color: white;
-    border: 1px solid black;
     padding-top: 10px;
     padding-bottom: 10px;
     color: #aa2e00;
@@ -244,5 +231,11 @@ button {
     button {
 
         width: 100%
+    }
+
+    .ingredients,
+    .nutrition,
+    .preparation {
+        width: 100%;
     }
 }
