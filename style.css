@@ -56,7 +56,7 @@ header > p {
 }
 
 .search-list,
-.search-result {
+.show-recipe {
     margin-top: 30px;
     margin-bottom: 20px;
 }
@@ -112,7 +112,7 @@ button {
     color: #E0FFFF;
 }
 
-.result {
+.search-result {
     width: 90%;
     margin-top: 20px;
     margin-left: auto;
@@ -121,7 +121,7 @@ button {
 }
 
 
-.result > p {
+.search-result > p {
     text-align: center;
     font-size: 18px;
 }
@@ -172,7 +172,7 @@ button {
     margin-right: auto;
 }
 
-.result-page {
+.show-recipe {
     background-image: linear-gradient( rgba(255, 215, 15, 1), rgba(255, 215, 15, 0.5));
     padding-top: 10px;
     padding-bottom: 10px;
