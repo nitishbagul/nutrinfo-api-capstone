@@ -1,81 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>NutrInfo Web App</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Search over 2 milllion food recipies across the globe">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <head>
+        <title>NutrInfo Web App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="Search over 2 milllion food recipies across the globe">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
 
-<body>
-    <header>
-        <h1>NutrInfo</h1>
-        <p>Want to cook your favorite meal but not sure how healthy it is? NutrInfo is your friend. Search over 2 million food recipies across the globe along with the nutrition information.
-        </p>
-    </header>
+    <body>
+        <header>
+            <h1>NutrInfo</h1>
+            <p>Want to cook your favorite meal but not sure how healthy it is? NutrInfo is your friend. Search over 2 million food recipies across the globe along with the nutrition information.
+            </p>
+        </header>
 
-    <main role="main">
-        <form class="js-search-form">
-            <div class="wrapper-input">
-                <label for="query"><h2>Search a food item here</h2></label>
-                <input type="text" id="query" class="js-query" aria-label="search">
-            </div>
-            <button type="submit" id="search-button">Search</button>
-            <p class="accuracy-note">*For accurate results, try to be as specific as possible</p>
-        </form>
-        <section class="search-result">
-            <p>Here are some results matching your query. Select any of them to know more.</p>
-            <ul class="query-results">
-                <!--
+        <main role="main">
+            <form class="js-search-form">
+                <div class="wrapper-input">
+                    <label for="query"><h2>Search a food item here</h2></label>
+                    <input type="text" id="query" class="js-query" aria-label="search">
+                </div>
+                <button type="submit" id="search-button">Search</button>
+                <p class="accuracy-note">*For accurate results, try to be as specific as possible</p>
+            </form>
+            <section class="search-result">
+                <p>Here are some results matching your query. Select any of them to know more.</p>
+                <ul class="query-results">
+                    <!--
 <li>Teriyaki Chicken</li>
 <li>Chicken Vesuvio</li>
 <li>Chicken Satay</li>
 <li>Baked Chicken</li>
 <li>Catalan Chicken</li>
 -->
-            </ul>
-        </section>
+                </ul>
+            </section>
 
-        <section class="show-recipe">
-            <div class="title-area">
-                <!--
+            <section class="show-recipe">
+                <div class="title-area">
+                    <!--
 <img src="https://www.edamam.com/web-img/262/262b4353ca25074178ead2a07cdf7dc1.jpg" alt="Smiley face" class="title-image">
 <h4 class="item-name">Chicken Teriyaki</h4>
 -->
-            </div>
-            <div class="result-wrapper">
-                <div class="ingredients">
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li>3 tbs oil</li>
-                        <li>2 tbs sugar</li>
-                        <li>1/2 c chopped onions</li>
-                    </ul>
                 </div>
-                <div class="nutrition">
-                    <h3>Nutrition</h3>
-                    <ul>
-                        <li>Fat 7g</li>
-                        <li>Carbs 24g</li>
-                        <li>Protiens 5g</li>
-                        <li>Fiber 5g</li>
-                    </ul>
-                </div>
-                <div class="preparation">
-                    <h3>Preparation</h3>
-                    <p>Read full recipe here</p>
-                    <button type="button">Instructions</button>
-                </div>
+                <div class="result-wrapper">
+                    <div class="ingredients">
+                        <h3>Ingredients</h3>
+                        <ul class="ingredients-list">
+                            <!--
+<li>3 tbs oil</li>
+<li>2 tbs sugar</li>
+<li>1/2 c chopped onions</li>
+<li>One 2-inch (5cm) piece of fresh ginger, peeled and grated</li>
+-->
+                        </ul>
+                    </div>
+                    <div class="nutrition">
+                        <h3>Nutrition</h3>
+                        <ul class="nutrition-list">
+                            <li>Fat 7g</li>
+                            <li>Carbs 24g</li>
+                            <li>Protiens 5g</li>
+                            <li>Fiber 5g</li>
+                        </ul>
+                    </div>
+                    <div class="preparation">
+                        <!--
+<h3>Preparation</h3>
+<p>Read full recipe here</p>
+<button type="button">Instructions</button>
+-->
+                    </div>
 
-            </div>
-        </section>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-</body>
+                </div>
+            </section>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </body>
 
 </html>

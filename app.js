@@ -1,10 +1,11 @@
 /* Step1: Defining Global variable functions and objects*/
 let RESULT = null;
+let INSTRUCTIONS_LINK = null;
 
 function displayRecipeChoices(result) {
     console.log(result);
     //create an empty variable to store one LI for each one the results
-    var buildTheHtmlOutput = "";
+    let buildTheHtmlOutput = "";
 
     $.each(result, function (resultKey, resultValue) {
         //create and populate one LI for each of the results ( "+=" means concatenate to the previous one)
@@ -17,8 +18,7 @@ function displayRecipeChoices(result) {
     $(".query-results").html(buildTheHtmlOutput);
 }
 
-function displayRecipeDetails(clickedBtnID) {
-    console.log(RESULT[0]);
+function displayRecipeImage(clickedBtnID) {
     var buildTheHtmlOutput = "";
 
     //show image
@@ -27,6 +27,34 @@ function displayRecipeDetails(clickedBtnID) {
     buildTheHtmlOutput += `<h4 class="item-name">${RESULT[clickedBtnID].recipe.label}</h4>`;
 
     $(".title-area").html(buildTheHtmlOutput);
+}
+
+function displayRecipeIngredients(clickedBtnID) {
+    let ingredientsList = RESULT[clickedBtnID].recipe.ingredientLines;
+    console.log(ingredientsList);
+    let buildTheHtmlOutput = "";
+
+    $.each(ingredientsList, function (resultIndex, resultValue) {
+        //create and populate one LI for each of the results ( "+=" means concatenate to the previous one)
+        buildTheHtmlOutput += `<li>`;
+        buildTheHtmlOutput += resultValue;
+        buildTheHtmlOutput += "</li>";
+    });
+
+    $(".ingredients-list").html(buildTheHtmlOutput);
+}
+
+function displayRecipeInstructions(clickedBtnID) {
+    let buildTheHtmlOutput = "";
+    //create and populate one LI for each of the results ( "+=" means concatenate to the previous one)
+    buildTheHtmlOutput += `<h3>Preparation</h3>`;
+    buildTheHtmlOutput += `<p>Read full recipe here</p>`;
+    buildTheHtmlOutput += `<form>
+<button type="submit" formaction="${RESULT[clickedBtnID].recipe.url}">Instructions</button>
+</form>`;
+
+    //use the HTML output to show it in the index.html
+    $(".preparation").html(buildTheHtmlOutput);
 }
 
 /* Step2: Using Global variable functions and objects {triggers}*/
@@ -75,7 +103,9 @@ $(document).on('click', '.query-results li', function (event) {
     event.preventDefault();
     let clickedBtnID = this.id.match(/\d+/)[0];
     console.log(clickedBtnID);
-    displayRecipeDetails(clickedBtnID);
+    displayRecipeImage(clickedBtnID);
+    displayRecipeIngredients(clickedBtnID);
+    displayRecipeInstructions(clickedBtnID);
     $(".show-recipe").show();
     $(".search-result").hide();
 });
