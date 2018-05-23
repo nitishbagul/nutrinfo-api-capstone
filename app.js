@@ -44,14 +44,30 @@ function displayRecipeIngredients(clickedBtnID) {
     $(".ingredients-list").html(buildTheHtmlOutput);
 }
 
+function displayNutritionValues(clickedBtnID) {
+    let nutritionList = RESULT[clickedBtnID].recipe.totalDaily;
+    console.log(nutritionList);
+    let buildTheHtmlOutput = "";
+
+    $.each(nutritionList, function (resultIndex, resultValue) {
+        //create and populate one LI for each of the results ( "+=" means concatenate to the previous one)
+        buildTheHtmlOutput += `<li>`;
+        buildTheHtmlOutput += resultValue.label;
+        buildTheHtmlOutput += `: `;
+        buildTheHtmlOutput += parseInt(resultValue.quantity);
+        buildTheHtmlOutput += resultValue.unit;
+        buildTheHtmlOutput += "</li>";
+    });
+
+    $(".nutrition-list").html(buildTheHtmlOutput);
+}
+
 function displayRecipeInstructions(clickedBtnID) {
     let buildTheHtmlOutput = "";
     //create and populate one LI for each of the results ( "+=" means concatenate to the previous one)
     buildTheHtmlOutput += `<h3>Preparation</h3>`;
     buildTheHtmlOutput += `<p>Read full recipe here</p>`;
-    buildTheHtmlOutput += `<form>
-<button type="submit" formaction="${RESULT[clickedBtnID].recipe.url}">Instructions</button>
-</form>`;
+    buildTheHtmlOutput += `<a href="${RESULT[clickedBtnID].recipe.url}" target=_blank>Instructions</a>`;
 
     //use the HTML output to show it in the index.html
     $(".preparation").html(buildTheHtmlOutput);
@@ -81,11 +97,17 @@ $(document).ready(function () {
                 /* if the call is successful (status 200 OK) show results */
                 .done(function (result) {
                     /* if the results are meeningful, we can just console.log them */
-                    //console.log(result);
-                    RESULT = result.hits;
-                    displayRecipeChoices(result.hits);
-                    $(".show-recipe").hide();
-                    $(".search-result").show();
+                    console.log(result);
+                    //Show the error message if no results found
+                    if (result.count == 0) {
+                        alert("no results found");
+                    } else {
+                        $("#query").val("");
+                        RESULT = result.hits;
+                        displayRecipeChoices(result.hits);
+                        $(".show-recipe").hide();
+                        $(".search-result").show();
+                    }
                 })
                 /* if the call is NOT successful show errors */
                 .fail(function (jqXHR, error, errorThrown) {
@@ -106,6 +128,7 @@ $(document).on('click', '.query-results li', function (event) {
     displayRecipeImage(clickedBtnID);
     displayRecipeIngredients(clickedBtnID);
     displayRecipeInstructions(clickedBtnID);
+    displayNutritionValues(clickedBtnID);
     $(".show-recipe").show();
     $(".search-result").hide();
 });
