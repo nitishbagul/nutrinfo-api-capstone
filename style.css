@@ -145,7 +145,13 @@ button {
     font-weight: 500px;
 }
 
-.title-area {
+.item-title {
+    text-align: center;
+    color: #aa2e00;
+    font-size: 20px;
+}
+
+.image-area {
     line-height: 120px;
     padding: 10px;
     text-align: center;
@@ -162,17 +168,21 @@ button {
     vertical-align: middle;
 }
 
-.title-area h4 {
-    color: #aa2e00;
-    font-weight: 400;
-    font-size: 20px;
-}
-
-.item-name {
+.recipe-button-area {
     display: inline-block;
     line-height: normal;
     vertical-align: middle;
-    font-weight: 600;
+    margin-left: 25px;
+}
+
+.full-recipe-text {
+    color: #aa2e00;
+    font-weight: 400;
+}
+
+.full-recipe-button {
+    width: 80px;
+    height: 30px;
 }
 
 .result-wrapper {
@@ -189,8 +199,7 @@ button {
 }
 
 .ingredients,
-.nutrition,
-.preparation {
+.nutrition {
     display: inline-block;
     border: 1px solid black;
     height: 200px;
@@ -221,9 +230,6 @@ button {
     font-size: 18px;
 }
 
-.preparation > p {
-    color: #34415e;
-}
 
 /*Media Queries*/
 

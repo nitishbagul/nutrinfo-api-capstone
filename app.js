@@ -18,15 +18,25 @@ function displayRecipeChoices(result) {
     $(".query-results").html(buildTheHtmlOutput);
 }
 
+function displayRecipeTitle(clickedBtnID) {
+    var buildTheHtmlOutput = "";
+    buildTheHtmlOutput += RESULT[clickedBtnID].recipe.label;
+
+    $(".item-title").html(buildTheHtmlOutput);
+
+}
+
 function displayRecipeImage(clickedBtnID) {
     var buildTheHtmlOutput = "";
 
     //show image
-    buildTheHtmlOutput += `<img src="${RESULT[clickedBtnID].recipe.image}" alt="main image" class="title-image"> `;
-    //show title
-    buildTheHtmlOutput += `<h4 class="item-name">${RESULT[clickedBtnID].recipe.label}</h4>`;
+    buildTheHtmlOutput += `<img src="${RESULT[clickedBtnID].recipe.image}" alt="main image" class="title-image">`;
+    buildTheHtmlOutput += `<div class="recipe-button-area">
+<h4 class="full-recipe-text">Read full recipe here:</h4>
+<a href="${RESULT[clickedBtnID].recipe.url}" target=_blank>Instructions</a>
+</div>`
 
-    $(".title-area").html(buildTheHtmlOutput);
+    $(".image-area").html(buildTheHtmlOutput);
 }
 
 function displayRecipeIngredients(clickedBtnID) {
@@ -125,6 +135,7 @@ $(document).on('click', '.query-results li', function (event) {
     event.preventDefault();
     let clickedBtnID = this.id.match(/\d+/)[0];
     console.log(clickedBtnID);
+    displayRecipeTitle(clickedBtnID);
     displayRecipeImage(clickedBtnID);
     displayRecipeIngredients(clickedBtnID);
     displayRecipeInstructions(clickedBtnID);
