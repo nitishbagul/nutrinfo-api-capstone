@@ -122,6 +122,7 @@ $(document).ready(function () {
                     //Show the error message if no results found
                     if (result.count == 0) {
                         displayFailureText();
+                        $(".search-result").hide();
                         $(".search-update-text").show();
                     } else {
                         $("#query").val("");

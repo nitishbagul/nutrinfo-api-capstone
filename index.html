@@ -27,14 +27,14 @@
             <button type="submit" id="search-button">Search</button>
             <p class="accuracy-note">*For accurate results, try to be as specific as possible</p>
         </form>
-        <p class="search-update-text">12 Results found</p>
-        <section class="search-result" role="contentinfo" aria-label="Recipe list">
-            <p>Here are some results matching your query. Select any one to know more.</p>
+        <p class="search-update-text" aria-live="assertive"></p>
+        <section class="search-result" role="contentinfo" aria-label="Recipe list" aria-live="polite">
+            <p>Here are few best results matching your query. Select any one to know more.</p>
             <ul class="query-results">
             </ul>
         </section>
 
-        <section class="show-recipe" role="contentinfo" aria-label="Showing recipe details">
+        <section class="show-recipe" role="contentinfo" aria-label="Showing recipe details" aria-live="polite">
             <h4 class="item-title">
             </h4>
             <div class="image-area">
