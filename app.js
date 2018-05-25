@@ -42,8 +42,8 @@ function displayRecipeImage(clickedBtnID) {
     //show image
     buildTheHtmlOutput += `<img src="${RESULT[clickedBtnID].recipe.image}" alt="recipe image" class="recipe-image">`;
     buildTheHtmlOutput += `<div class="recipe-button-area">
-<h4 class="full-recipe-text">Read full recipe here:</h4>
-<a href="${RESULT[clickedBtnID].recipe.url}" target=_blank>Instructions</a>
+<p class="full-recipe-text">Read full recipe here:</p>
+<a href="${RESULT[clickedBtnID].recipe.url}" target=_blank class="instructions">Instructions</a>
 </div>`
 
     $(".image-area").html(buildTheHtmlOutput);

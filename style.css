@@ -17,8 +17,8 @@
 }
 
 html {
-    background: linear-gradient( rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.4)), url("http://hdsa.org/wp-content/themes/hdsa/images/img_livingHD_nutrition1.jpg") no-repeat center center fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)), url("http://hdsa.org/wp-content/themes/hdsa/images/img_livingHD_nutrition1.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -28,7 +28,6 @@ html {
 
 
 header {
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     margin-top: 20px;
     width: 90%;
     margin-left: auto;
@@ -114,7 +113,7 @@ button {
     color: #E0FFFF;
 }
 
-.search-update-text {
+.search-update-text{
     display: block;
     color: white;
     font-size: 18px;
@@ -128,7 +127,6 @@ button {
     margin-right: auto;
 
 }
-
 
 .search-result > p {
     text-align: center;
@@ -185,11 +183,11 @@ button {
 .full-recipe-text {
     color: #aa2e00;
     font-weight: 400;
+    font-size: 18px;
 }
 
-.full-recipe-button {
-    width: 80px;
-    height: 30px;
+.instructions{
+    font-size: 17px;
 }
 
 .result-wrapper {
@@ -217,15 +215,24 @@ button {
     overflow-y: auto;
 }
 
-.result-wrapper h3 {
-    color: white;
+.result-wrapper h4 {
     padding-top: 10px;
     padding-bottom: 10px;
-    color: #aa2e00;
+    color:#aa2e00;
     font-weight: 600;
     font-size: 18px;
 }
 
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 90%;
+    background-color: black;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .result-wrapper ul {
     color: #34415e;
     list-style: none;
