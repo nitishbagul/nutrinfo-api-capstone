@@ -2,6 +2,16 @@
 let RESULT = null;
 let INSTRUCTIONS_LINK = null;
 
+function displayFailureText() {
+    let buildTheHtmlOutput = "Sorry! We did not find any results for your query."
+    $(".search-update-text").html(buildTheHtmlOutput);
+}
+
+function displaySuccessText(result) {
+    let buildTheHtmlOutput = `${result.count} results found`;
+    $(".search-update-text").html(buildTheHtmlOutput);
+}
+
 function displayRecipeChoices(result) {
     console.log(result);
     //create an empty variable to store one LI for each one the results
@@ -30,7 +40,7 @@ function displayRecipeImage(clickedBtnID) {
     var buildTheHtmlOutput = "";
 
     //show image
-    buildTheHtmlOutput += `<img src="${RESULT[clickedBtnID].recipe.image}" alt="main image" class="title-image">`;
+    buildTheHtmlOutput += `<img src="${RESULT[clickedBtnID].recipe.image}" alt="recipe image" class="recipe-image">`;
     buildTheHtmlOutput += `<div class="recipe-button-area">
 <h4 class="full-recipe-text">Read full recipe here:</h4>
 <a href="${RESULT[clickedBtnID].recipe.url}" target=_blank>Instructions</a>
@@ -90,6 +100,7 @@ $(document).ready(function () {
     //do stuff
     $(".show-recipe").hide();
     $(".search-result").hide();
+    $(".search-update-text").hide();
     //form trigger
     $('#search-button').on('click', function (event) {
         event.preventDefault();
@@ -110,10 +121,13 @@ $(document).ready(function () {
                     console.log(result);
                     //Show the error message if no results found
                     if (result.count == 0) {
-                        alert("no results found");
+                        displayFailureText();
+                        $(".search-update-text").show();
                     } else {
                         $("#query").val("");
                         RESULT = result.hits;
+                        displaySuccessText(result);
+                        $(".search-update-text").show();
                         displayRecipeChoices(result.hits);
                         $(".show-recipe").hide();
                         $(".search-result").show();
@@ -142,4 +156,5 @@ $(document).on('click', '.query-results li', function (event) {
     displayNutritionValues(clickedBtnID);
     $(".show-recipe").show();
     $(".search-result").hide();
+    $(".search-update-text").hide();
 });

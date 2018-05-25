@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    <header role="banner">
         <h1>NutrInfo</h1>
         <p>Want to cook your favorite meal but not sure how healthy it is? NutrInfo is your friend. Search over 2 million food recipies across the globe along with the nutrition information.
         </p>
@@ -27,13 +27,14 @@
             <button type="submit" id="search-button">Search</button>
             <p class="accuracy-note">*For accurate results, try to be as specific as possible</p>
         </form>
-        <section class="search-result">
-            <p>Here are some results matching your query. Select any of them to know more.</p>
+        <p class="search-update-text">12 Results found</p>
+        <section class="search-result" role="contentinfo" aria-label="Recipe list">
+            <p>Here are some results matching your query. Select any one to know more.</p>
             <ul class="query-results">
             </ul>
         </section>
 
-        <section class="show-recipe">
+        <section class="show-recipe" role="contentinfo" aria-label="Showing recipe details">
             <h4 class="item-title">
             </h4>
             <div class="image-area">
