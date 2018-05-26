@@ -19,8 +19,10 @@ function displayRecipeChoices(result) {
 
     $.each(result, function (resultKey, resultValue) {
         //create and populate one LI for each of the results ( "+=" means concatenate to the previous one)
-        buildTheHtmlOutput += `<li id="item-${resultKey}">`;
+        buildTheHtmlOutput += `<li>`;
+        buildTheHtmlOutput += `<a id="item-${resultKey}">`;
         buildTheHtmlOutput += resultValue.recipe.label;
+        buildTheHtmlOutput += `</a>`;
         buildTheHtmlOutput += "</li>";
     });
 
@@ -58,7 +60,7 @@ function displayRecipeIngredients(clickedBtnID) {
         //create and populate one LI for each of the results ( "+=" means concatenate to the previous one)
         buildTheHtmlOutput += `<li>`;
         buildTheHtmlOutput += resultValue;
-        buildTheHtmlOutput += "</li>";
+        buildTheHtmlOutput += `</li>`;
     });
 
     $(".ingredients-list").html(buildTheHtmlOutput);
@@ -145,7 +147,7 @@ $(document).ready(function () {
 });
 
 //button triggers
-$(document).on('click', '.query-results li', function (event) {
+$(document).on('click', '.query-results a', function (event) {
 
     event.preventDefault();
     let clickedBtnID = this.id.match(/\d+/)[0];
