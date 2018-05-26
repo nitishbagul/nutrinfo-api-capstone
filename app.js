@@ -147,7 +147,7 @@ $(document).ready(function () {
 });
 
 //button triggers
-$(document).on('click', '.query-results a', function (event) {
+$(document).on('click, touchstart', '.query-results a', function (event) {
 
     event.preventDefault();
     let clickedBtnID = this.id.match(/\d+/)[0];
