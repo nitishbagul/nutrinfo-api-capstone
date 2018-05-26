@@ -147,7 +147,22 @@ $(document).ready(function () {
 });
 
 //button triggers
-$(document).on('click, touchstart', '.query-results a', function (event) {
+$(document).on('touchstart', '.query-results a', function (event) {
+
+    event.preventDefault();
+    let clickedBtnID = this.id.match(/\d+/)[0];
+    console.log(clickedBtnID);
+    displayRecipeTitle(clickedBtnID);
+    displayRecipeImage(clickedBtnID);
+    displayRecipeIngredients(clickedBtnID);
+    displayRecipeInstructions(clickedBtnID);
+    displayNutritionValues(clickedBtnID);
+    $(".show-recipe").show();
+    $(".search-result").hide();
+    $(".search-update-text").hide();
+});
+
+$(document).on('click', '.query-results a', function (event) {
 
     event.preventDefault();
     let clickedBtnID = this.id.match(/\d+/)[0];
