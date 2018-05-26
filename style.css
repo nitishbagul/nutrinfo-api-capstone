@@ -18,7 +18,7 @@
 
 html {
     background: linear-gradient( rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)), url("http://hdsa.org/wp-content/themes/hdsa/images/img_livingHD_nutrition1.jpg") no-repeat center center fixed;
+    rgba(0, 0, 0, 0.5)), url("http://hdsa.org/wp-content/themes/hdsa/images/img_livingHD_nutrition1.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -113,7 +113,7 @@ button {
     color: #E0FFFF;
 }
 
-.search-update-text{
+.search-update-text {
     display: block;
     color: white;
     font-size: 18px;
@@ -186,7 +186,7 @@ button {
     font-size: 18px;
 }
 
-.instructions{
+.instructions {
     font-size: 17px;
 }
 
@@ -218,7 +218,7 @@ button {
 .result-wrapper h4 {
     padding-top: 10px;
     padding-bottom: 10px;
-    color:#aa2e00;
+    color: #aa2e00;
     font-weight: 600;
     font-size: 18px;
 }
@@ -233,6 +233,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
 }
+
 .result-wrapper ul {
     color: #34415e;
     list-style: none;
@@ -257,6 +258,12 @@ hr {
     button {
 
         width: 100%
+    }
+
+    .wrapper-input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .ingredients,
